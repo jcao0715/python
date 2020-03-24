@@ -1,4 +1,4 @@
-# access interpreter using "python"
+# access interpreter using "python3"
 # _ is assigned the last printed expression
 # integers are int
 # decimals are floats
@@ -28,6 +28,5 @@ while a < 10:
 
 a, b = 0, 1
 while a < 1000:
-	print(a) 
-   #print(a, end = ', ') end avoids making a new line 
+   	print(a, end = ', ') #end avoids making a new line 
 	a, b = b, a + b
