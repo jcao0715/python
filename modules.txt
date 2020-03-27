@@ -1,0 +1,47 @@
+module - contains python definitions and statements
+
+fibo.py:
+
+def fib(n):
+	a, b = 0, 1
+	while a < n:
+		print(a, end = ' ')
+		a, b = b, a + b
+	print()
+
+def fib2(n):
+	result  = []
+	a, b = 0, 1
+	while a < n:
+		result.append(a)
+		a, b = b, a + b
+	return result
+
+
+>>> import fibo 
+	- allows you to access functions in fibo
+	>>> fibo.fib(10)
+	fib = fibo.fib
+
+>>> from fibo import fib, fib2
+	- does same thing as >>> from fibo import *
+	- using * is frowned upon, so beware
+>>> fib(500)
+
+>>> import fibo as fib
+	- renames fibo to fib
+
+>>> from fibo import fib as fibonacci
+	- renames fib to fibonacci
+
+
+if __name__  == "__main__":
+	import sys
+	fib(int(sys.arbv[1]))
+
+- allows you to do:
+>>> python fibo.py 10
+... 0 1 1 2 3 5 8
+
+>>> dir(fibo)
+	 - returns names in which a module defines
